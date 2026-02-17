@@ -5,9 +5,6 @@ WORKDIR /app
 COPY ./pyproject.toml .env ./
 COPY ./src/ ./src/
 
-RUN apt-get update
-RUN apt-get install -y --no-install-recommends libpq-dev && rm -rf /var/lib/apt/lists/*
-
 RUN pip install --upgrade pip
 RUN pip install -e ".[dev]"
 
