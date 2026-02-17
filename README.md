@@ -19,3 +19,9 @@ python manage.py migrate
 ```
 docker compose -f docker-compose.dev.yaml up --build
 ```
+
+### Tailwind
+To have refreshing on the fly tailwind, watching for changes in the templates you have to run:
+```
+npm install && npx @tailwindcss/cli -i ./src/static/src/input.css -o ./src/static/src/output.css --watch
+```
